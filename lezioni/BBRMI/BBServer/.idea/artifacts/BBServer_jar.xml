@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="BBServer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BBServer_jar</output-path>
+    <root id="root">
+      <element id="archive" name="BBServer.jar">
+        <element id="module-output" name="BBServer" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/../BBCommon/out/artifacts/BBCommon_jar/BBCommon.jar" />
+    </root>
+  </artifact>
+</component>

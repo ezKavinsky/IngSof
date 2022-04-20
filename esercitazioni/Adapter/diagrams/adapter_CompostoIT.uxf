@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>480</x>
+      <y>470</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;</panel_attributes>
+    <additional_attributes>30;30;30;100</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>210</x>
+      <y>570</y>
+      <w>630</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>CompostoItAdaptee
+--
+-name: String
+-formula: String
+-melting: double
+-weight: double
+-bolinig: double
+--
++CompostoItAdaptee(String name, String formula, double melting, double weight, double bolinig)
++get(Type t): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>320</x>
+      <y>340</y>
+      <w>390</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>CompostoItAdapter
+--
+-composto: CompostoEngAdaptee
+--
++CompostoItAdapter(CompostoEngAdaptee composto)
++dammiPesoMolecolare(): double
++dammiPuntoDiFusione(): double
++dammiPuntoDiEbollizione(): double
++dammiFormulaChimica(): String
++dammiNomeComposto(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>480</x>
+      <y>240</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>30;30;30;100</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>360</x>
+      <y>130</y>
+      <w>300</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+CompostoItTarget
+--
+--
++dammiPesoMolecolare(): double
++dammiPuntoDiFusione(): double
++dammiPuntoDiEbollizione(): double
++dammiFormulaChimica(): String
++dammiNomeComposto(): String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>260</x>
+      <y>150</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>140</y>
+      <w>280</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>CompostoMain
+--
+
+--
++main(String[] args): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

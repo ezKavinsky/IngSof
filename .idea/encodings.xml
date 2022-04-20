@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/esercitazioni/Bridge/src/is/bridge/PrinterAbs.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/esercitazioni/Bridge/src/is/bridge/PrinterImpl.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/esercitazioni/ChainOfResp/src/chain_of_responsability/ChainOfResponsibilityExample.java" charset="windows-1252" />
+  </component>
+</project>

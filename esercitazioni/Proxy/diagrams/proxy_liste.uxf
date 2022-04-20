@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>3</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>219</x>
+      <y>363</y>
+      <w>66</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>is.lista.impl::ListaSuArray
+--
+-elementi: Object[]
+-size: int
+--
++ListaSuArray(int capacita): ctor
++ListaSuArray(Lista&lt;E&gt; l): ctor
++aggiungi(int index, E dato): void
++aggiungi(E dato): void
++contiene(E dato): boolean
++copia(): Lista&lt;E&gt;
++rimuovi(int index): void
++rimuovi(E dato): boolean
++size(): int
++dammiElemento(int index): E
+-resize(ResizeType tipo): void
++toString(): String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>789</x>
+      <y>363</y>
+      <w>96</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>is.lista.sicurezza::ListaSicura
+--
+-lista: Lista&lt;E&gt;
+-pu: PermessiUtente
+--
++ListaSicura(Lista&lt;E&gt; l, int nread, int nwrite): ctor
+-ListaSicura(): ctor
++aggiungi(int index, E dato): void
++aggiungi(E dato): void
++contiene(E dato): boolean
++copia(): Lista&lt;E&gt;
++dammiElemento(int index): E
++rimuovi(int index): void
++rimuovi(E dato): boolean
++size(): int
++toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>366</x>
+      <y>240</y>
+      <w>66</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+is.lista::Lista
+--
+--
+~size(): int
+~contiene(E dato): boolean
+~aggiungi(int index, E dato): void
+~aggiungi(E dato): void
+~rimuovi(int index): void
+~rimuovi(E dato): boolean
+~dammiElemento(int index): E
+~copia(): Lista&lt;E&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>357</x>
+      <y>363</y>
+      <w>78</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>is.lista.copyonwrite::ListaCopyOnWrite
+--
+-ref: ReferenceCounter&lt;E&gt;
+--
++ListaCopyOnWrite(Lista&lt;E&gt; l): ctor
+-ListaCopyOnWrite(): ctor
++size(): int
++contiene(E dato): boolean
++aggiungi(int index, E dato): void
++aggiungi(E dato): void
++rimuovi(int index): void
++rimuovi(E dato): boolean
++dammiElemento(int index): E
++copia(): Lista&lt;E&gt;
+#finalize(): void
++toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>834</x>
+      <y>294</y>
+      <w>9</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>249</x>
+      <y>294</y>
+      <w>153</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>490.0;10.0;490.0;120.0;10.0;120.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>393</x>
+      <y>294</y>
+      <w>9</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>282</x>
+      <y>366</y>
+      <w>81</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ref</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>366</y>
+      <w>111</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lista</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>804</x>
+      <y>240</y>
+      <w>66</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+is.lista::Lista
+--
+--
+~size(): int
+~contiene(E dato): boolean
+~aggiungi(int index, E dato): void
+~aggiungi(E dato): void
+~rimuovi(int index): void
+~rimuovi(E dato): boolean
+~dammiElemento(int index): E
+~copia(): Lista&lt;E&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>621</x>
+      <y>360</y>
+      <w>66</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>is.lista.impl::ListaSuArray
+--
+-elementi: Object[]
+-size: int
+--
++ListaSuArray(int capacita): ctor
++ListaSuArray(Lista&lt;E&gt; l): ctor
++aggiungi(int index, E dato): void
++aggiungi(E dato): void
++contiene(E dato): boolean
++copia(): Lista&lt;E&gt;
++rimuovi(int index): void
++rimuovi(E dato): boolean
++size(): int
++dammiElemento(int index): E
+-resize(ResizeType tipo): void
++toString(): String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>651</x>
+      <y>294</y>
+      <w>192</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>620.0;10.0;620.0;130.0;10.0;130.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>639</x>
+      <y>471</y>
+      <w>123</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>is.lista.sicurezza::PermessiUtente
+--
+-numeroLetture: int
+-numeroScritture: int
+--
++PermessiUtente(int numeroLetture, int numeroScritture): ctor
++getNumeroLetture(): int
++getNumeroScritture(): int
++decrementaLetture(): void
++decrementaScritture(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>696</x>
+      <y>375</y>
+      <w>99</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+pu</panel_attributes>
+    <additional_attributes>10.0;320.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>876</x>
+      <y>387</y>
+      <w>72</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>220.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>942</x>
+      <y>393</y>
+      <w>54</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>pu.decrementaScritture();
+lista.aggiungi(dato);
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>492</x>
+      <y>387</y>
+      <w>75</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>ref = ref.copyIfNecessary();
+ref.getLista().aggiungi(index, dato);
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>426</x>
+      <y>381</y>
+      <w>72</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>220.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>393</x>
+      <y>438</y>
+      <w>9</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=(+)-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>351</x>
+      <y>468</y>
+      <w>87</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>ReferenceCounter
+--
+- counter: int
+- lista:Lista&lt;E&gt;
+--
++ ReferenceCounter(Lista&lt;E&gt; l): ctor
+--
++ getLista():Lista&lt;E&gt;
++ decr():void
++ incr():void
++ copyIfNecessary():ReferenceCounter&lt;E&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

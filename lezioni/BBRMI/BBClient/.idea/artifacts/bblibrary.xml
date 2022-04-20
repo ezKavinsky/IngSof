@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bblibrary">
+    <output-path>$PROJECT_DIR$/out/artifacts/bblibrary</output-path>
+    <root id="archive" name="bblibrary.jar">
+      <element id="directory" name="is">
+        <element id="directory" name="boundedbuffer_producer">
+          <element id="file-copy" path="$PROJECT_DIR$/out/production/BBClient/is/boundedbuffer_producer/PCMessage.class" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

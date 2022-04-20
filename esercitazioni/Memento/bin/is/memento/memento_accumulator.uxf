@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>506</x>
+      <y>539</y>
+      <w>363</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>is.memento::AccumulatorImpl
+--
+-serialVersionUID = 4644289305884060794L: long
+-value: double
+--
++AccumulatorImpl(Accumulator m): ctor
++AccumulatorImpl(double value): ctor
++getValue(): double
++setValue(double value): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>539</y>
+      <w>330</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>is.memento::ProcessingUnit
+--
+-acc = new AccumulatorImpl(0): Accumulator
+--
++createMemento(): Memento
++setMemento(Memento m): void
++process(Operation op, double val): void
++getCurrentComputationValue(): double
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>319</y>
+      <w>220</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+is.memento::Accumulator
+--
+--
+~getValue(): double
+~setValue(double value): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>44</x>
+      <y>165</y>
+      <w>242</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+is.memento::Originator
+--
+--
+~createMemento(): Memento
+~setMemento(Memento m): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>968</x>
+      <y>154</y>
+      <w>286</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>/is.memento::CareTaker/
+--
+-mem = new Memento[10]: Memento[]
+--
++main(String[] args): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>165</y>
+      <w>176</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+is.memento::Memento
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>154</x>
+      <y>253</y>
+      <w>33</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>671</x>
+      <y>209</y>
+      <w>33</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>671</x>
+      <y>407</y>
+      <w>33</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>759</x>
+      <y>154</y>
+      <w>231</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+mem</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>319</x>
+      <y>528</y>
+      <w>209</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;creates&gt;&gt;</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

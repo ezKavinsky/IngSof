@@ -1,0 +1,127 @@
+<Document> Titolo del documento
+  <Section> Sezione 1
+    <Paragraph> Questo è un paragrafo. 
+    Corto ma pur sempre un paragrafo.  
+    </Paragraph>
+    <Paragraph>
+    Anche questo è un paragrafo
+    </Paragraph>
+    <Paragraph>
+    Che ore sono?
+    </Paragraph>
+  </Section>
+  <Section> Sezione 2
+  <Paragraph>
+  Un paragrafo ancora.   
+  </Paragraph>
+   <SubSection> Sezione 2.1
+   <Paragraph>
+   I paragrafi possono apparire dentro le sottosezioni.
+  </Paragraph>
+  <Paragraph>
+  Altro paragrafo.
+  </Paragraph>
+  
+   </SubSection>
+  </Section>
+  <Section> Principi fondamentali della Costituzione Italiana
+  <SubSection> Art. 1
+  <Paragraph> L'Italia è una Repubblica democratica, fondata sul lavoro.
+</Paragraph>
+<Paragraph>
+La sovranità appartiene al popolo, che la esercita nelle forme e nei limiti della Costituzione.
+</Paragraph>
+</SubSection>
+<SubSection> Art. 2 
+<Paragraph>
+La Repubblica riconosce e garantisce i diritti inviolabili dell'uomo, sia come singolo sia nelle formazioni sociali ove si svolge la sua personalità, e richiede l'adempimento dei doveri inderogabili di solidarietà politica, economica e sociale.
+</Paragraph>
+</SubSection>
+<SubSection> Art. 3
+<Paragraph>
+Tutti i cittadini hanno pari dignità sociale e sono eguali davanti alla legge, senza distinzione di sesso, di razza, di lingua, di religione, di opinioni politiche, di condizioni personali e sociali.
+</Paragraph>
+<Paragraph>
+
+È compito della Repubblica rimuovere gli ostacoli di ordine economico e sociale, che, limitando di fatto la libertà e l'eguaglianza dei cittadini, impediscono il pieno sviluppo della persona umana e l'effettiva partecipazione di tutti i lavoratori all'organizzazione politica, economica e sociale del Paese.
+</Paragraph> 
+</SubSection>
+
+
+
+
+
+
+<SubSection> 
+Art. 4
+<Paragraph>
+La Repubblica riconosce a tutti i cittadini il diritto al lavoro e promuove le condizioni che rendano effettivo questo diritto.
+</Paragraph>
+<Paragraph>
+Ogni cittadino ha il dovere di svolgere, secondo le proprie possibilità e la propria scelta, un'attività o una funzione che concorra al progresso materiale o spirituale della società.
+</Paragraph>
+</SubSection>
+<SubSection> 
+Art. 5
+<Paragraph>
+La Repubblica, una e indivisibile, riconosce e promuove le autonomie locali; attua nei servizi che dipendono dallo Stato il più ampio decentramento amministrativo; adegua i principi ed i metodi della sua legislazione alle esigenze dell'autonomia e del decentramento.
+</Paragraph>
+</SubSection>
+<SubSection> 
+Art. 6
+<Paragraph>
+La Repubblica tutela con apposite norme le minoranze linguistiche.
+</Paragraph>
+</SubSection>
+<SubSection> 
+Art.7
+<Paragraph>
+Lo Stato e la Chiesa cattolica sono, ciascuno nel proprio ordine, indipendenti e sovrani.
+</Paragraph> <Paragraph>
+I loro rapporti sono regolati dai Patti Lateranensi. Le modificazioni dei Patti accettate dalle due parti, non richiedono procedimento di revisione costituzionale.
+</Paragraph>
+</SubSection>
+<SubSection> 
+Art. 8
+<Paragraph>
+Tutte le confessioni religiose sono egualmente libere davanti alla legge.
+</Paragraph> <Paragraph>
+Le confessioni religiose diverse dalla cattolica hanno diritto di organizzarsi secondo i propri statuti, in quanto non contrastino con l'ordinamento giuridico italiano.
+</Paragraph> <Paragraph>
+I loro rapporti con lo Stato sono regolati per legge sulla base di intese con le relative rappresentanze.  
+</Paragraph>
+</SubSection>
+<SubSection> 
+Art. 9
+<Paragraph>
+La Repubblica promuove lo sviluppo della cultura e la ricerca scientifica e tecnica.
+</Paragraph> <Paragraph>
+Tutela il paesaggio e il patrimonio storico e artistico della Nazione.
+</Paragraph>
+</SubSection>
+<SubSection> 
+Art. 10
+<Paragraph>
+L'ordinamento giuridico italiano si conforma alle norme del diritto internazionale generalmente riconosciute.
+</Paragraph> <Paragraph>
+La condizione giuridica dello straniero è regolata dalla legge in conformità delle norme e dei trattati internazionali.
+</Paragraph> <Paragraph>
+Lo straniero, al quale sia impedito nel suo paese l'effettivo esercizio delle libertà democratiche garantite dalla Costituzione italiana, ha diritto d'asilo nel territorio della Repubblica secondo le condizioni stabilite dalla legge.
+</Paragraph> <Paragraph>
+Non è ammessa l'estradizione dello straniero per reati politici. 
+</Paragraph>
+</SubSection>
+<SubSection> 
+Art. 11
+<Paragraph>
+L'Italia ripudia la guerra come strumento di offesa alla libertà degli altri popoli e come mezzo di risoluzione delle controversie internazionali; consente, in condizioni di parità con gli altri Stati, alle limitazioni di sovranità necessarie ad un ordinamento che assicuri la pace e la giustizia fra le Nazioni; promuove e favorisce le organizzazioni internazionali rivolte a tale scopo.
+</Paragraph>
+</SubSection>
+<SubSection> 
+Art. 12
+<Paragraph>
+La bandiera della Repubblica è il tricolore italiano: verde, bianco e rosso, a tre bande verticali di eguali dimensioni.
+</Paragraph>  
+</SubSection>
+</Section>
+</Document>

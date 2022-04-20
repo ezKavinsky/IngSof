@@ -1,0 +1,5 @@
+grant{
+permission java.net.SocketPermission "*:1024-65535", "accept, connect, resolve";
+permission java.io.FilePermission "buffer.properties" , "read";
+
+};

@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="simpleRMIserver">
+    <output-path>$PROJECT_DIR$/out/artifacts/simpleRMIserver</output-path>
+    <root id="archive" name="simpleRMIserver.jar">
+      <element id="directory" name="is">
+        <element id="directory" name="simpleRMI">
+          <element id="directory" name="server">
+            <element id="directory" name="msg">
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/simpleRMIserver/is/simpleRMI/server/msg/CompoundMessage.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/simpleRMIserver/is/simpleRMI/server/msg/SimpleMessage.class" />
+            </element>
+          </element>
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

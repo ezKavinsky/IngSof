@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>408</y>
+      <w>288</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+-codice: String
+-nome: String
+-cognome: String
+-indirizzo: String
+--
++Cliente(String codice, String nome, String cognome, String indirizzo): ctor
++Cliente(String s): ctor
++getIndirizzo(): String
++getNome(): String
++getCognome(): String
++getCodice(): String
++setIndirizzo(String nuovoInd): void
++toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>888</x>
+      <y>462</y>
+      <w>288</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>ContrattoTelefonico
+--
+-codiceCliente: String
+-numeroTelefonico: String
+-tipoContratto: String
+-tariffa: double
+--
++ContrattoTelefonico(String codCli, String num, String tipo, double t): ctor
++ContrattoTelefonico(String s): ctor
++getTariffa(): double
+~setTariffa(double v): void
++getTipoContratto(): String
++getCodiceCliente(): String
++getNumeroTelefonico(): String
++toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>888</x>
+      <y>288</y>
+      <w>294</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>ContrattoTelevisivo
+--
+-codiceCliente: String
+-tipoContratto: String
+-tariffa: double
+-codice: String
+--
++ContrattoTelevisivo(String cod, String codCli, String tipo, double tar): ctor
++getCodice(): String
++getCodiceCliente(): String
++getTipoContratto(): String
++getTariffa(): double
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>330</y>
+      <w>228</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ArchivioContratti
+--
++lnkContratto = null: is.factorycontratti.Contratto
+--
+~getListaContratti(): List&lt;T&gt;
+~getContrattoCodice(String cod): T
+~getContrattiCliente(String codCli): List&lt;T&gt;
+~getContrattiTipo(String tipo): List&lt;T&gt;
+~getContrattiClienteTipo(String codCli, String tipo): List&lt;T&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>36</x>
+      <y>150</y>
+      <w>222</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ArchivioClienti
+--
++lnkCliente = null: is.factorycontratti.Cliente
+--
+~getListaClienti(): List&lt;Cliente&gt;
+~getClienteNome(String cognome, String nome): Cliente
+~getClienteCodice(String cod): Cliente</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>270</y>
+      <w>222</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ArchivioClientiTxt
+--
+-file: RandomAccessFile
+--
++ArchivioClientiTxt(String filename): ctor
++getListaClienti(): List&lt;Cliente&gt;
++getClienteNome(String cognome, String nome): Cliente
++getClienteCodice(String cod): Cliente
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>702</x>
+      <y>336</y>
+      <w>114</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Contratto
+--
+--
++getTipoContratto(): String
++getCodiceCliente(): String
++getTariffa(): double
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1158</x>
+      <y>150</y>
+      <w>288</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>FactoryArchiviTxt
+--
+--
++createArchivioClienti(): ArchivioClienti
++createArchivioContrattiTelefonici(): ArchivioContratti&lt;ContrattoTelefonico&gt;
++createArchivioContrattiTelevisivi(): ArchivioContratti&lt;ContrattoTelevisivo&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>354</x>
+      <y>150</y>
+      <w>312</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>ArchivioGenerale
+--
+-lnkFactoryArchivi: is.factorycontratti.FactoryArchivi
+~contrattiTelefonici: ArchivioContratti&lt;ContrattoTelefonico&gt;
+~contrattiTelevisivi: ArchivioContratti&lt;ContrattoTelevisivo&gt;
+~clienti: ArchivioClienti
+--
++ArchivioGenerale(FactoryArchivi factory): ctor
++cercaCliente(String cod): Cliente
++cercaContrattoTelevisivo(String cod): ContrattoTelevisivo
++cercaContrattoTelefonico(String num): ContrattoTelefonico
++cercaContrattiTelCli(String cognome, String nome): List&lt;ContrattoTelefonico&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>150</y>
+      <w>294</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+FactoryArchivi
+--
+--
+~createArchivioClienti(): ArchivioClienti
+~createArchivioContrattiTelefonici(): ArchivioContratti&lt;ContrattoTelefonico&gt;
+~createArchivioContrattiTelevisivi(): ArchivioContratti&lt;ContrattoTelevisivo&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>402</x>
+      <y>480</y>
+      <w>234</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>ArchivioContrattiTxt
+--
+-file: RandomAccessFile
+--
++ArchivioContrattiTxt(String filename): ctor
++getListaContratti(): List&lt;T&gt;
++getContrattoCodice(String cod): T
++getContrattiCliente(String codCli): List&lt;T&gt;
++getContrattiTipo(String tipo): List&lt;T&gt;
++getContrattiClienteTipo(String codCli, String tipo): List&lt;T&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>258</y>
+      <w>18</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>564</x>
+      <y>258</y>
+      <w>18</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>156</y>
+      <w>114</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>216</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>420</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>618</x>
+      <y>336</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=0...*</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>288</y>
+      <w>90</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;60.0;100.0;60.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>342</y>
+      <w>90</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;210.0;130.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>336</y>
+      <w>30</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=0...*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>150</y>
+      <w>144</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>150</y>
+      <w>90</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>516</x>
+      <y>198</y>
+      <w>762</w>
+      <h>444</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;creates&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;630.0;10.0;720.0;1250.0;720.0;1250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>198</y>
+      <w>858</w>
+      <h>474</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;creates&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;630.0;10.0;770.0;1410.0;770.0;1410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>246</x>
+      <y>198</y>
+      <w>1152</w>
+      <h>510</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;creates&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;130.0;120.0;130.0;120.0;830.0;1900.0;830.0;1900.0;10.0</additional_attributes>
+  </element>
+</diagram>

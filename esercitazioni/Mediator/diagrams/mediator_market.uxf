@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>423</y>
+      <w>216</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>MarketServiceOrganizerImpl
+--
+
+--
++ createEntities()
++ entityChanged(me: MarketEntity)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>279</y>
+      <w>216</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+MarketServiceOrganizer
+--
+
+--
++ entityChanged(me: MarketEntity)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>747</x>
+      <y>279</y>
+      <w>90</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>/MarketEntity/
+--
+
+--
++ changed()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>621</x>
+      <y>423</y>
+      <w>144</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Cashier
+--
+
+--
++ initService(q: Queue) 
++ endService( ) 
++ isFree(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>828</x>
+      <y>423</y>
+      <w>135</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Queue
+--
+
+--
++enqueue() 
++dequeue() 
++getSize(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>783</x>
+      <y>333</y>
+      <w>126</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;120.0;60.0;120.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>333</y>
+      <w>126</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;60.0;10.0;60.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>351</y>
+      <w>27</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>288</y>
+      <w>306</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=organizer</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>423</y>
+      <w>180</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=cashier1</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>495</y>
+      <w>576</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=queue1</panel_attributes>
+    <additional_attributes>570.0;20.0;570.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>441</y>
+      <w>180</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=cashier2</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>297</x>
+      <y>495</y>
+      <w>693</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=queue2</panel_attributes>
+    <additional_attributes>700.0;20.0;700.0;110.0;10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>900</x>
+      <y>225</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>changed (){
+  organizer.entityChanged(this);
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>531</x>
+      <y>333</y>
+      <w>108</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>endService (){ 
+  isFree = true; 
+  changed();
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>954</x>
+      <y>324</y>
+      <w>99</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>enQueue(){ 
+  size++; 
+  changed(); 
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>603</x>
+      <y>387</y>
+      <w>63</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>927</x>
+      <y>378</y>
+      <w>90</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>828</x>
+      <y>252</y>
+      <w>90</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+</diagram>

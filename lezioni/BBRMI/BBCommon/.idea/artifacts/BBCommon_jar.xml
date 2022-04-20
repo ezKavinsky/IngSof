@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BBCommon.jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BBCommon_jar</output-path>
+    <root id="archive" name="BBCommon.jar">
+      <element id="module-output" name="BBCommon" />
+    </root>
+  </artifact>
+</component>
